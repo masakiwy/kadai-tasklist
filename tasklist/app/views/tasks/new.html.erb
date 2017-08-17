@@ -1,0 +1,13 @@
+<h1>Task新規作成ページ</h1>
+
+<%= form_for(@newtask) do |i| %>
+  
+  <%= i.label :content, "タスク" %>
+  <%= i.text_field :content %>
+  <%= i.label :status, 'ステータス' %>
+  <%= i.text_field :status %>
+  
+  <%= i.submit "Regist" %>
+<% end %>
+<%= link_to "All Tasksに戻る", tasks_path %>
+  

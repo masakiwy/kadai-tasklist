@@ -1,0 +1,11 @@
+<h1>id: <%= @edittask.id %> の編集ページ</h1>
+
+<%= form_for(@edittask) do |i| %>
+  <%= i.label :content, 'タスク' %>
+  <%= i.text_field :content %>
+  <%= i.label :status, 'ステータス' %>
+  <%= i.text_field :status %>
+
+  <%= i.submit "Modify" %>
+<% end %>
+<%= link_to "All Tasksに戻る", tasks_path %>

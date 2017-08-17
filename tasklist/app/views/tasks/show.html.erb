@@ -1,0 +1,9 @@
+<h1>Task ID = <%= @task.id %>の詳細ページ</h1>
+<p>タスク名 : <%= @task.content %></p>
+<p>Create Date : <%= @task.created_at %></p>
+<p>Update Date : <%= @task.updated_at %></p>
+<p>Status : <%= @task.status %></p>
+<br>
+<%= link_to "All Tasksに戻る", tasks_path %>
+<%= link_to 'このTaskを編集する', edit_task_path(@task) %>
+<%= link_to 'このTaskを削除する', @deletask, method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %>
