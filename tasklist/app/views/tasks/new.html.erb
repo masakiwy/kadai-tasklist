@@ -1,13 +1,16 @@
-<h1>Task新規作成ページ</h1>
-
-<%= form_for(@newtask) do |i| %>
-  
-  <%= i.label :content, "タスク" %>
-  <%= i.text_field :content %>
-  <%= i.label :status, 'ステータス' %>
-  <%= i.text_field :status %>
-  
-  <%= i.submit "Regist" %>
-<% end %>
-<%= link_to "All Tasksに戻る", tasks_path %>
-  
+<h1>Task新規作成ページ<span class="badge badge-secondary">New</span></h1>
+  <%= form_for(@newtask) do |i| %>
+    <div style="width:100%; height:150px;">
+      <div class="col-xs-12 col-sm-offset-2 col-sm-6 col-md-offset-2 col-md-6 col-lg-offset-3 col-lg-3"> 
+        <div class="form-group">
+          <%= i.label :content, "タスク" %>
+          <%= i.text_field :content, class: 'form-control' %>
+          <%= i.label :status, 'ステータス' %>
+          <%= i.text_field :status, class: 'form-control' %>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-offset-2 col-sm-6 col-md-offset-2 col-md-6 col-lg-offset-3 col-lg-3"> 
+      <%= i.submit "Regist", class: "btn btn-primary" %>
+    </div>
+  <% end %>

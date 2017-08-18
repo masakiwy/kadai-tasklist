@@ -1,11 +1,11 @@
 <h1>All Tasks</h1>
-<table border="1" cellspacing="0" style= "border-color:darkslategray; border-style:solid; border-width:3px;">
+<table class="table table-bordered">
   <thead>
     <tr>
-      <th>ID</th>
-      <th>Task</th>
-      <th>Status</th>
-      <th>Update Time</th>
+      <th scope="row">ID</th>
+      <th scope="row">Task</th>
+      <th scope="row">Status</th>
+      <th scope="row">Update Time</th>
     </tr>
   </thead>
   <tbody>
@@ -18,5 +18,6 @@
       <% end %>    
     </tr>
   </tbody>
-</table><br>
-<%= link_to "New Task Registration", new_task_path %>
+</table>
+<%= paginate @tasks %><br>
+<%= link_to "New Task Registration", new_task_path, class: "btn btn-success" %>
